@@ -6,27 +6,31 @@
   "icons": {
     "128": "img/icon.png"
   },
+
   "content_scripts": [
     {
-      "matches": ["https://spotify.com*"], 
+      "matches": ["https://open.spotify.com/*"],
       "css": ["style.css"]
     }
   ],
+
   "permissions": [
     "declarativeNetRequest"
   ],
+
   "host_permissions": [
-    "https://spotify.com*",
+    "https://open.spotify.com/*",
     "https://*.audio-ak-spotify-com.akamaized.net/*",
-    "https://*://*",
-    "https://*.audio-akp-quic-spotify-com.akamaized.net/*",
-    "https://spotify.com*"
+    "https://*.audio-akp-quic-spotify-com.akamaized.net/*"
   ],
+
   "declarative_net_request": {
-    "rule_resources": [{
-      "id": "ruleset_1",
-      "enabled": true,
-      "path": "rules.json"
-    }]
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
   }
 }
