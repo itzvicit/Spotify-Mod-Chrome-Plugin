@@ -8,7 +8,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://spotify.com*"], 
+      "matches": ["https://spotify.com*", "https://spotify.com*"], 
       "css": ["style.css"]
     }
   ],
@@ -18,7 +18,7 @@
   "host_permissions": [
     "https://spotify.com*",
     "https://*.audio-ak-spotify-com.akamaized.net/*",
-    "https://*.googlesyndication.com/*",
+    "https://*://*",
     "https://*.audio-akp-quic-spotify-com.akamaized.net/*",
     "https://spotify.com*"
   ],
